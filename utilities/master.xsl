@@ -13,30 +13,30 @@
 				doctype-system="about:legacy-compat"/>
 
 <xsl:template match="/">
-<xsl:text disable-output-escaping="yes">
-	&lt;!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --&gt;
-	&lt;!--[if lt IE 7]&gt; <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> &lt;![endif]--&gt;
-	&lt;!--[if IE 7]&gt;		<html class="no-js lt-ie9 lt-ie8" lang="en"> &lt;![endif]--&gt;
-	&lt;!--[if IE 8]&gt;		<html class="no-js lt-ie9" lang="en"> &lt;![endif]--&gt;
-	<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-	&lt;!--[if gt IE 8]&gt;&lt;!--&gt; <html class="no-js" lang="en"> &lt;!--&lt;![endif]--&gt;
-</xsl:text>
+
+<xsl:comment><![CDATA[[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7"><![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8"><![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9"><![endif]]]></xsl:comment>
+<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment><html lang="en" class="no-js">
+<xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
 <html class="no-js">
 	<head>
-<xsl:text disable-output-escaping="yes">
-&lt;!--
 
-  (o_                    _o)
-  //\    Hello there!    /\\
-  V_/_                  _\_V
-==============================
-
-If you, like us, enjoy adding comments
-for those peeking under the hood.
-You can do it like this.
-
---&gt;
-</xsl:text>
+	<xsl:text disable-output-escaping="yes">
+	&lt;!--
+	
+	  (o_                    _o)
+	  //\    Hello there!    /\\
+	  V_/_                  _\_V
+	==============================
+	
+	If you, like us, enjoy adding comments
+	for those peeking under the hood, you
+	can do it like this.
+	
+	--&gt;
+	</xsl:text>
 	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -60,8 +60,10 @@ You can do it like this.
 <body>
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
  			chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<xsl:text disable-output-escaping="yes">
-		&lt;!--[if lt IE 7]&gt;&lt;p class=chromeframe&gt;Your browser is &lt;em&gt;ancient!&lt;/em&gt; &lt;a href="http://browsehappy.com/"&gt;Upgrade to a different browser&lt;/a&gt; or &lt;a href="http://www.google.com/chromeframe/?redirect=true"&gt;install Google Chrome Frame&lt;/a&gt; to experience this site.&lt;/p&gt;&lt;![endif]--&gt;
+	<xsl:comment>
+	
+	</xsl:comment>
+		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	</xsl:text>
 
 	<header role="banner">
@@ -99,7 +101,6 @@ You can do it like this.
 	<script>
 		google.load("jquery", "1.7.1");
 		google.load("jqueryui", "1.8.17");
-
 
 		google.load("webfont", "1");
 
