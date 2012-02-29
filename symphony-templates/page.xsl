@@ -9,6 +9,8 @@
 	encoding="UTF-8"
 	indent="yes" />
 
+<xsl:import href="../utilities/master.xsl"/>
+
 <xsl:template match="/">
 	<section role="main">
 	</section>
