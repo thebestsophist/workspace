@@ -113,13 +113,3 @@ $invalid-background-color: $light-red !default;
 $color-transition: color 0.6s ease;
 $background-transition: background 0.3s ease;
 $border-transition: border 0.3s ease;
-
-@mixin buttonification {
-	font-size: 24px;
-	font-size: 1.5rem;
-	padding: 7px 12px;
-	padding: .44rem .75rem;
-	@include border-radius(4px);
-	@include border-radius(.25rem);	
-	@include transition($color-transition, $background-transition, $border-transition);
-}

@@ -100,7 +100,6 @@ You can do it like this.
 		google.load("jquery", "1.7.1");
 		google.load("jqueryui", "1.8.17");
 
-
 		google.load("webfont", "1");
 
 		google.setOnLoadCallback(function() {
