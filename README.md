@@ -1,6 +1,6 @@
 # Symphony CMS + Compass + HTML5 Boilerplate + Media queries == Sexy
 
-Version: 2012.02.01a (http://enguindesign.com/journal/articles/2011/07/versioning-revisited/) 
+Version: 2012.02.01b (http://enguindesign.com/journal/articles/2011/07/versioning-revisited/) 
 
 HTML5 Boilerplate Version: 3.0.6
 
