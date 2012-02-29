@@ -13,9 +13,8 @@ This is a revision of the basic Symphony CMS workspace to use Compass/SASS, the 
 - Customized typographic scale using rem with px-based fallback (http://modularscale.com/scale/?px1=16&px2=12&ra1=1.5&ra2=0).
 - Customized color scheme based on enguindesign.com (use these at your own peril).
 - Basic 6-column grid layouts for 48em and 60em screen widths.
-- Extreme minimalist form designs (use these at your peril).
+- Updated default page.xsl which you should link to in symphony/templates.
 
-This was created mostly for our own use at Enguin Design, so there are a number of additions and changes to set it up the way we like it. If you'd like a version that is closer to HTML5 Boilerplate, use the branch `compass-h5bp` which leaves out many of the custom styles and additions that appear in this version.
 
 ## Requirements
 
@@ -30,7 +29,6 @@ This template makes some pretty major changes to Compass-H5bp.
 - Media queries with basic 6 column grid for 769px and 960px screen widths (set using mixins in the _base.scss file.
 - Instead of including media queries in the _media.scss partial file, it takes advantage of @media bubbling to nest the media queries for elements together. (http://thesassway.com/intermediate/responsive-web-design-part-2)
 - It offers a wider default color palate.
-- It changes the way forms are styled, if you want the h5bp basic, you are better off using the compass-h5bp branch
 - Element sizes based on rem with px failsafes. (http://snook.ca/archives/html_and_css/font-size-with-rem)
 
 ## Templates
