@@ -3,22 +3,22 @@
 
 <xsl:import href="date-time.xsl"/>
 <xsl:import href="page-title.xsl"/>
+<xsl:import href="typography.xsl"/>
 
 
 	<xsl:output encoding="UTF-8" 
 				indent="yes" 
 				method="html" 
 				media-type="text/html" 
-				omit-xml-declaration="yes" 
-				doctype-system="about:legacy-compat"/>
+				omit-xml-declaration="yes"/>
 
 <xsl:template match="/">
-
+<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
 <xsl:comment><![CDATA[[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]]]></xsl:comment>
 <xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7"><![endif]]]></xsl:comment>
 <xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8"><![endif]]]></xsl:comment>
 <xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment><html lang="en" class="no-js">
+<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment>
 <xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
 <html class="no-js">
 <head>
@@ -111,7 +111,7 @@
 			}});
 		});
 	</script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.7.1.js"%3E%3C/script%3E'))]]></script>
 
 	<!-- scripts concatenated and minified via build script -->
 	<script src="js/plugins.js"></script>
