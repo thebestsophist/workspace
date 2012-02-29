@@ -37,4 +37,7 @@ This template makes some pretty major changes to Compass-H5bp.
 The templates in the `symphony-templates/` are meant to replace the files in `/symphony/templates` the main updates are to page.xsl to take advantage of HTML5 elements.
 
 ## License
+HTML5 Boilerplate created by by Paul Irish and Divya Manian http://html5boilerplate.com
+Compass-H5pb by Peter Gumeson https://github.com/sporkd/compass-h5bp
+
 Do what you will. Anything we've created is granted with the MIT/X11 license, just like Symphony CMS.
