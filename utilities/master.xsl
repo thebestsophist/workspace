@@ -21,7 +21,7 @@
 <xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment><html lang="en" class="no-js">
 <xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
 <html class="no-js">
-	<head>
+<head>
 
 	<xsl:text disable-output-escaping="yes">
 	&lt;!--
@@ -37,20 +37,21 @@
 	
 	--&gt;
 	</xsl:text>
-	<meta charset="utf-8">
+
+	<meta charset="utf-8"/>
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
  			More info: h5bp.com/i/378 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
 	<title></title>
-	<meta name="description" content="">
+	<meta name="description" content=""/>
 
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width"/>
 
 	<!-- Styles are generated using Compass and the html5-boilerplate gem in workspace/scss -->
-	<link rel="stylesheet" href="{$workspace}/css/style.css">
+	<link rel="stylesheet" href="{$workspace}/css/style.css"/>
 
 	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -61,10 +62,9 @@
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
  			chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<xsl:comment>
-	
+		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->	
 	</xsl:comment>
-		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-	</xsl:text>
+
 
 	<header role="banner">
 	
