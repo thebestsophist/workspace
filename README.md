@@ -15,9 +15,7 @@ This is a revision of the basic Symphony CMS workspace to use Compass/SASS, the 
 - Basic 6-column grid layouts for 48em and 60em screen widths.
 - Updated default page.xsl which you should link to in symphony/templates.
 
-
 ## Requirements
-
 - Compass (http://compass-style.org/)
 - Compass H5bp gem (https://github.com/sporkd/compass-h5bp)
 
