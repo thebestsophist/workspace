@@ -10,6 +10,7 @@ This is a revision of the basic Symphony CMS workspace to use Compass/SASS, the 
 ### Features
 - Lots of Compass/SASS love.
 - Media query love using modernizr with respond.js
+- Responsive images using Modernizr.mq and jQuery .attr
 - Customized typographic scale using rem with px-based fallback (http://modularscale.com/scale/?px1=16&px2=12&ra1=1.5&ra2=0).
 - Customized color scheme based on enguindesign.com (use these at your own peril).
 - Basic 6-column grid layouts for 48em and 60em screen widths.
@@ -24,9 +25,12 @@ This was created mostly for our own use at Enguin Design, so there are a number 
 
 ## Changes to HTML5 Boilerplate and Compass-H5bp
 This template makes some minor changes to the HTML5 Boilerplate.
+
 - It adds jQuery and jQuery UI, as well the Google Web Font API via the Google Loader.
+- A dead simple method of providing responsive images using Modernizr.mq and jQuery's .attr() method. Although this isn't as elegant as a method with server-side optimizations (with cookies), it still works pretty well.
 
 This template makes some pretty major changes to Compass-H5bp.
+
 - Media queries with basic 6 column grid for 769px and 960px screen widths (set using mixins in the _base.scss file.
 - Instead of including media queries in the _media.scss partial file, it takes advantage of @media bubbling to nest the media queries for elements together. (http://thesassway.com/intermediate/responsive-web-design-part-2)
 - It offers a wider default color palate.
