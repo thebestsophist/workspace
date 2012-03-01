@@ -18,7 +18,7 @@ if (Modernizr.mq('only screen and (max-width: 767px)')) {
 /* Anything > 48em */
 if (Modernizr.mq('only screen and (min-width: 768px)')) {
 	/* Replaces a mobile full-width image at 768px into one at 960px */
-	$('img').attr('src').replace('/image/1/768/','/image/1/960/')
+	$('img').attr('src').replace('image/1/768/','image/1/960/')
 };
 
 /* Between 48em and 60em */
