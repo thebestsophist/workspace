@@ -5,24 +5,17 @@
 <xsl:import href="page-title.xsl"/>
 <xsl:import href="typography.xsl"/>
 
-
-	<xsl:output encoding="UTF-8" 
-				indent="yes" 
-				method="html" 
-				media-type="text/html" 
-				omit-xml-declaration="yes"/>
-
+<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
+	
 <xsl:template match="/">
-<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-<xsl:comment><![CDATA[[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
-<html class="no-js">
-<head>
+	<xsl:comment><![CDATA[[if IE 6]><html lang="en" class="no-js ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if !(lte IE 9)]><!]]></xsl:comment><html lang="en" class="no-js"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
+		<head>
 	<meta charset="utf-8"/>
+	
 	<xsl:text disable-output-escaping="yes">
 	&lt;!--
 	
@@ -37,14 +30,12 @@
 	
 	--&gt;
 	</xsl:text>
-
-
+	
+	<title><xsl:value-of select="$page-title"/><xsl:text> &#8212; </xsl:text><xsl:value-of select="$website-name"/></title>
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
  			More info: h5bp.com/i/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-
-	<title></title>
 	<meta name="description" content=""/>
 
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->

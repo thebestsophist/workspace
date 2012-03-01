@@ -23,6 +23,15 @@ This was created mostly for our own use at Enguin Design, so there are a number 
 - Compass (http://compass-style.org/)
 - Compass H5bp gem (https://github.com/sporkd/compass-h5bp)
 
+## Using this template
+After downloading this template, you can drop the whole thing into your Symphony folder. Alternatively, if you are using git. I prefer `git clone` this into its own folder and create a symlink to workspace/ (that way git doesn't get persnickety). Also, should remove `symphony/template` and replace it with a symlink to the `symphony-templates/` folder in this repository, this way you get the updated page.xsl template when creating new pages.
+
+If you are new to Compass–or need a constant reminder like I do–all you have to do is run `compass watch [myproject]` in the command line and compass will watch and update your css files.
+
+I have included mixins for two sets of grids: one set at 48em (768px) and a second set at 60em (960px). I've tried to keep it all documented, and if you want, it is pretty easy to change or update it yourself. I have also included javascript media queries to match the CSS media queries. There is also an example for using jQuery's .attr() method and Symphony's JIT Image Manipulation method for serving responsive images.
+
+Finally, I have not included anything for minimizing your javascript, feel free to do so yourself.
+
 ## Changes to HTML5 Boilerplate and Compass-H5bp
 This template makes some minor changes to the HTML5 Boilerplate.
 
@@ -44,4 +53,4 @@ The templates in the `symphony-templates/` are meant to replace the files in `/s
 HTML5 Boilerplate created by by Paul Irish and Divya Manian http://html5boilerplate.com
 Compass-H5pb by Peter Gumeson https://github.com/sporkd/compass-h5bp
 
-Do what you will. Anything we've created is granted with the MIT/X11 license, just like Symphony CMS.
+Do what you will. Everything I've created here released with the MIT/X11 license, just like Symphony CMS.
