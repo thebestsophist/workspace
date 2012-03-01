@@ -22,7 +22,7 @@
 <xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
 <html class="no-js">
 <head>
-
+	<meta charset="utf-8"/>
 	<xsl:text disable-output-escaping="yes">
 	&lt;!--
 	
@@ -38,7 +38,7 @@
 	--&gt;
 	</xsl:text>
 
-	<meta charset="utf-8"/>
+
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
  			More info: h5bp.com/i/378 -->
@@ -111,7 +111,9 @@
 			}});
 		});
 	</script>
-	<script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.7.1.js"%3E%3C/script%3E'))]]></script>
+	<xsl:text disable-output-escaping="yes">
+	&lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.7.1.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+	</xsl:text>
 
 	<!-- scripts concatenated and minified via build script -->
 	<script src="{$workspace}/js/plugins.js"></script>
