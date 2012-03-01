@@ -8,44 +8,6 @@
 <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
 	
 <xsl:template match="/">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
->>>>>>> refs/heads/compass-h5bp-ed
-<xsl:comment><![CDATA[[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8"><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9"><![endif]]]></xsl:comment>
-<<<<<<< HEAD
-<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment><html lang="en" class="no-js">
-<xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
-<html class="no-js">
-	<head>
-
-	<xsl:text disable-output-escaping="yes">
-	&lt;!--
-	
-	  (o_                    _o)
-	  //\    Hello there!    /\\
-	  V_/_                  _\_V
-	==============================
-	
-	If you, like us, enjoy adding comments
-	for those peeking under the hood, you
-	can do it like this.
-	
-	--&gt;
-	</xsl:text>
-	<meta charset="utf-8">
-=======
-<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment>
-<xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
-<html class="no-js">
-<head>
-
-=======
 	<xsl:comment><![CDATA[[if IE 6]><html lang="en" class="no-js ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6"><![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
@@ -54,7 +16,6 @@
 		<head>
 	<meta charset="utf-8"/>
 	
->>>>>>> refs/heads/compass-h5bp-ed
 	<xsl:text disable-output-escaping="yes">
 	&lt;!--
 	
@@ -69,14 +30,8 @@
 	
 	--&gt;
 	</xsl:text>
-<<<<<<< HEAD
-
-	<meta charset="utf-8"/>
->>>>>>> refs/heads/compass-h5bp-ed
-=======
 	
 	<title><xsl:value-of select="$page-title"/><xsl:text> &#8212; </xsl:text><xsl:value-of select="$website-name"/></title>
->>>>>>> refs/heads/compass-h5bp-ed
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
  			More info: h5bp.com/i/378 -->
@@ -91,23 +46,17 @@
 
 	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
-	<!-- Most JavaScript at the bottom, except Modernizr and google API (to deal with webfonts) -->
+	<!-- Most JavaScript at the bottom, except Modernizr and google API (to deal with webfonts) 
+		 respond.js is included. -->
 	<script src="{$workspace}/js/modernizr-2.5.2.min.js"></script>
 </head>
 <body>
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
  			chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<xsl:comment>
-<<<<<<< HEAD
-	
-	</xsl:comment>
-		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-	</xsl:text>
-=======
 		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->	
 	</xsl:comment>
 
->>>>>>> refs/heads/compass-h5bp-ed
 
 	<header role="banner">
 	

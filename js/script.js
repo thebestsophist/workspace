@@ -11,14 +11,20 @@
 /* Only < 48em */
 if (Modernizr.mq('only screen and (max-width: 767px)')) {
 
-
-
 }
 
 /* Anything > 48em */
 if (Modernizr.mq('only screen and (min-width: 768px)')) {
 
-	/* Replaces a mobile full-width image at 768px into one at 960px */
+	/* Replaces a mobile full-width image at 768px into one at 960px
+	   
+	   Similar to the ideas in
+	 - https://github.com/joshje/Responsive-Enhance and
+	 - https://github.com/filamentgroup/Responsive-Images
+	   but takes advantage of the JIT image manipulation
+	   extension that is included by default.
+	*/
+	
 	$('img').attr('src', function(index, attr) {
 		return attr.replace('image/1/768', 'image/1/960');
 	});
@@ -31,7 +37,5 @@ if (Modernizr.mq('only screen and (min-width: 768px) and (max-width: 960px)')) {
 
 /* Anything > 60em */
 if (Modernizr.mq('only screen and min-width: 960px)')) {
-
-
 
 }
