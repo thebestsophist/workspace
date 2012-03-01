@@ -9,25 +9,25 @@
 */
 
 /* Only < 48em */
-Modernizr.mq('only screen and (max-width: 767px)'),{
+if (Modernizr.mq('only screen and (max-width: 767px)')) {
 
 
 
 };
 
 /* Anything > 48em */
-Modernizr.mq('only screen and (min-width: 768px)'),{
+if (Modernizr.mq('only screen and (min-width: 768px)')) {
 	/* Replaces a mobile full-width image at 768px into one at 960px */
 	$('img').attr('src').replace('/image/1/768/','/image/1/960/')
 };
 
 /* Between 48em and 60em */
-Modernizr.mq('only screen and (min-width: 768px) and (max-width: 960px)'),{
+if (Modernizr.mq('only screen and (min-width: 768px) and (max-width: 960px)')) {
 
-}
+};
 
 /* Anything > 60em */
-Modernizr.mq('only screen and min-width: 960px)',{
+if (Modernizr.mq('only screen and min-width: 960px)')) {
 
 
 

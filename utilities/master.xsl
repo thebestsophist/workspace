@@ -114,8 +114,8 @@
 	<script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.7.1.js"%3E%3C/script%3E'))]]></script>
 
 	<!-- scripts concatenated and minified via build script -->
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
+	<script src="{$workspace}/js/plugins.js"></script>
+	<script src="{$workspace}/js/script.js"></script>
 	<!-- end scripts -->
 
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
