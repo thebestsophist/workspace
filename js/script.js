@@ -20,8 +20,8 @@ if (Modernizr.mq('only screen and (min-width: 768px)')) {
 
 	/* Replaces a mobile full-width image at 768px into one at 960px */
 	$('img').attr('src', function(index, attr) {
-   return attr.replace('image/1/768', 'image/1/960');
-});
+		return attr.replace('image/1/768', 'image/1/960');
+	});
 }
 
 /* Between 48em and 60em */
