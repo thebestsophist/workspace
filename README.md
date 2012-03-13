@@ -11,7 +11,7 @@ This is a revision of the basic Symphony CMS workspace to use Compass/SASS, the 
 - Lots of Compass/SASS love.
 - Media query love using modernizr with respond.js
 - Responsive images using Modernizr.mq and jQuery .attr
-- Javascript for server-side optimizations
+- Javascript for server-side optimizations (example usage in `utilities/codebits.xsl`)
 - Customized typographic scale using rem with px-based fallback (http://modularscale.com/scale/?px1=16&px2=12&ra1=1.5&ra2=0).
 - Customized color scheme based on enguindesign.com (use these at your own peril).
 - Basic 6-column grid layouts for 48em and 60em screen widths.
