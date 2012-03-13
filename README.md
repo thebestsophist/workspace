@@ -1,6 +1,6 @@
 # Symphony CMS + Compass + HTML5 Boilerplate + Media queries == Sexy
 
-Version: 2012.02.03a (http://enguindesign.com/journal/articles/2011/07/versioning-revisited/) 
+Version: 2012.02.04a (http://enguindesign.com/journal/articles/2011/07/versioning-revisited/) 
 
 HTML5 Boilerplate Version: 3.0.6
 
@@ -11,14 +11,16 @@ This is a revision of the basic Symphony CMS workspace to use Compass/SASS, the 
 - Lots of Compass/SASS love.
 - Media query love using modernizr with respond.js
 - Responsive images using Modernizr.mq and jQuery .attr
+- Javascript for server-side optimizations
 - Customized typographic scale using rem with px-based fallback (http://modularscale.com/scale/?px1=16&px2=12&ra1=1.5&ra2=0).
 - Customized color scheme based on enguindesign.com (use these at your own peril).
 - Basic 6-column grid layouts for 48em and 60em screen widths.
 - Updated default page.xsl which you should link to in symphony/templates.
 
 ## Requirements
-- Compass (http://compass-style.org/)
-- Compass H5bp gem (https://github.com/sporkd/compass-h5bp)
+- Compass <http://compass-style.org/>
+- Compass H5bp gem <https://github.com/sporkd/compass-h5bp>
+- Screen Detection Extension <https://github.com/thebestsophist/Screen-Detection-Extension>
 
 ## Using this template
 After downloading this template, you can drop the whole thing into your Symphony folder. Alternatively, if you are using git. I prefer `git clone` this into its own folder and create a symlink to workspace/ (that way git doesn't get persnickety). Also, should remove `symphony/template` and replace it with a symlink to the `symphony-templates/` folder in this repository, this way you get the updated page.xsl template when creating new pages.
@@ -26,6 +28,8 @@ After downloading this template, you can drop the whole thing into your Symphony
 If you are new to Compass–or need a constant reminder like I do–all you have to do is run `compass watch [myproject]` in the command line and compass will watch and update your css files.
 
 I have included mixins for two sets of grids: one set at 48em (768px) and a second set at 60em (960px). I've tried to keep it all documented, and if you want, it is pretty easy to change or update it yourself. I have also included javascript media queries to match the CSS media queries. There is also an example for using jQuery's .attr() method and Symphony's JIT Image Manipulation method for serving responsive images.
+
+To take full advantage of this workspace, you will also need the Screen Detection extension <https://github.com/thebestsophist/Screen-Detection-Extension> installed. This will allow you to use server-side optimizations for your media queries.
 
 Finally, I have not included anything for minimizing your javascript, feel free to do so yourself.
 
