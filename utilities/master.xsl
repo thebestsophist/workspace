@@ -8,11 +8,11 @@
 <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
 	
 <xsl:template match="/">
-	<xsl:comment><![CDATA[[if IE 6]><html lang="en" class="no-js ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6"><![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
-	<xsl:comment><![CDATA[[if !(lte IE 9)]><!]]></xsl:comment><html lang="en" class="no-js"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 6]><html lang="en" class="no-js wf-inactive ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js wf-inactive ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js wf-inactive ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js wf-inactive ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6"><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if !(lte IE 9)]><!]]></xsl:comment><html lang="en" class="no-js wf-inactive"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 		<head>
 	<meta charset="utf-8"/>
 	
@@ -41,6 +41,13 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width"/>
 
+	<link type="text/plain" rel="author">
+		<xsl:attribute name="href">
+			<xsl:value-of select="$workspace"/>
+			<xsl:text>/humans.txt</xsl:text>
+		</xsl:attribute>
+	</link>
+
 	<!-- Styles are generated using Compass and the html5-boilerplate gem in workspace/scss -->
 	<link rel="stylesheet" href="{$workspace}/css/style.css"/>
 
@@ -49,6 +56,20 @@
 	<!-- Most JavaScript at the bottom, except Modernizr and google API (to deal with webfonts) 
 		 respond.js is included. -->
 	<script src="{$workspace}/js/modernizr-2.5.2.min.js"></script>
+
+	<script src="https://www.google.com/jsapi"></script>
+	<script>
+		google.load("webfont", "1");
+
+		google.setOnLoadCallback(function() {
+			WebFont.load({
+			typekit: {
+			    id:''
+			}});
+		});
+	</script>
+
+
 </head>
 <body>
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -88,24 +109,7 @@
 		 as a default, you don't need to, but I find it useful
 		 the projects I work on.
 	-->
-
-	<script src="https://www.google.com/jsapi"></script>
-	<script>
-		google.load("jquery", "1.7.1");
-		google.load("jqueryui", "1.8.17");
-
-		google.load("webfont", "1");
-
-		google.setOnLoadCallback(function() {
-			WebFont.load({
-			typekit: {
-			    id:''
-			}});
-		});
-	</script>
-	<xsl:text disable-output-escaping="yes">
-	&lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.7.1.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
-	</xsl:text>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<!-- scripts concatenated and minified via build script -->
 	<script src="{$workspace}/js/plugins.js"></script>
@@ -114,13 +118,14 @@
 
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
  			mathiasbynens.be/notes/async-analytics-snippet -->
+<xsl:if test="not($cookie-username)">
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
-
+</xsl:if>
 
 </body>
 </html>

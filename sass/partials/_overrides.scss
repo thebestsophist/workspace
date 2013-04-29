@@ -34,7 +34,9 @@
 // @include h5bp-typography; // Ditching this for my own
 
 body {
-	@media screen and (min-width: 60em) { line-height: 27px; line-height: 1.688rem; }
+
+	@include line-height();
+	@include line-height($large-line-height, $large-width);
 }
 
 abbr[title] { border-bottom: 1px dotted; }
@@ -92,7 +94,7 @@ p, blockquote {
 }
 
 // Indents paragraphs that follow anything but a heading.
-img + p, aside + p, p + p, figure + p, figcaption + p, blockquote + p, q + p {
+svg + p, img + p, aside + p, p + p, figure + p, figcaption + p, blockquote + p, q + p {
 	text-indent: 24px;
 	text-indent: 1.5rem;
 }
