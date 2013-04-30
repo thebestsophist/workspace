@@ -20,6 +20,8 @@
 @import "partials/typography";
 @import "partials/page";
 
+@import "partials/shame";
+
 // Helpers classes should come second-to-last
 @include h5bp-helpers;
 
