@@ -1,4 +1,4 @@
-# Symphony CMS + Compass + HTML5 Boilerplate + Media queries == Sexy
+# Symphony CMS + Compass + HTML5 Boilerplate + Media queries == Awesome
 
 Version: 2013.04.29a (http://enguindesign.com/journal/articles/2011/07/versioning-revisited/) 
 
